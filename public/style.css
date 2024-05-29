@@ -1,106 +1,89 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-size: medium;
+/* General styles */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  flex-direction: column;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(img/Bmx.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:#000000;
+.chart-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60%;
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 20px;
 }
 
-.container_form{
-    width: 90%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-around;
-    transition: all .5s ease-out;
-
+/* Title styles */
+.chart-title {
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.welcome_back{
-    display: flex;
-    align-items: center;
-    text-align: center;
+/* Bar styles */
+.bar {
+  width: 12%;
+  background: #4caf50;
+  margin: 0 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.message{
-    padding: 1rem;
+.bar:hover {
+  background: #45a049;
+  transform: scale(1.05);
 }
 
-.message h2{
-    font-size: 1.7rem;
-    padding: 1rem 0;
-    background-color: rgb(71, 71, 71, 0.602);
+/* Label and value styles */
+.bar-label {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
 }
 
-.message p{
-    background-color: rgb(71, 71, 71, 0.602);
+.bar-value {
+  position: absolute;
+  top: -30px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
 }
 
-.formulario {
-    width: 400px;
-    padding: 1rem;
-    margin: 2rem;
-    background-color: rgb(51, 51, 51, 0.602);
-    text-align: center;
-}
+@media (max-width: 768px) {
+  .chart-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
 
-.create_account {
-    padding: 2.7rem 0;
-    font-size: 1.7rem;
-}
+  .bar {
+    width: 80%;
+    margin: 10px 0;
+  }
 
-.cuenta_gratis{
-    padding: 2rem 0;
-    margin-bottom: 1.5rem;
+  .bar-label,
+  .bar-value {
+    position: static;
+  }
 }
-
-.espacio_inicio_sesion {
-    padding: 2rem 0;
-}
-
-.formulario input {
-    width: 70%;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-    background-color: transparent;
-    border: none;
-    border-bottom: white thin solid;
-    text-align: center;
-    outline: none;
-    padding: .2rem 0;
-    font-size: .9rem;
-    color: black;
-}
-
-.formulario input[type="text"]::placeholder,
-.formulario input[type="email"]::placeholder,
-.formulario input[type="password"]::placeholder
-{
-    color:black;
-}
-
-.formulario input[type="submit"] {
-    width: 60%;
-    margin: auto;
-    border: solid thin white;
-    padding: .7rem;
-    border-radius: 2rem;
-    color: black;
-    background-color: brown;
-    font-weight: 600;
-    margin-top: 3rem;
-    font-size: .8rem;
-    cursor: pointer;
-}
-

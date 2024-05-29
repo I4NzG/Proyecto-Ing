@@ -1,0 +1,101 @@
+/* General styles */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the form */
+.container_form {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  width: 800px;
+  max-width: 100%;
+}
+
+/* Welcome back section */
+.welcome_back {
+  background: #6a82fb;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  width: 50%;
+}
+
+.welcome_back .message h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.welcome_back .message p {
+  margin: 20px 0;
+}
+
+.welcome_back .message a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Form styles */
+.formulario {
+  padding: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario h2 {
+  margin: 0 0 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.formulario input[type="email"],
+.formulario input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario input[type="submit"] {
+  background: #6a82fb;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario input[type="submit"]:hover {
+  background: #5a72db;
+}
+
+.espacio_inicio_sesion {
+  height: 20px; /* Adjust the height if needed */
+}
+
+/* Error message */
+body .error {
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}

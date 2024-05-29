@@ -1,29 +1,39 @@
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <title>Banco de alimentos de Mexico</title>
-
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/style2.css" />
+  <title>BAMX</title>
 </head>
 
 <body>
-    <% if (messages.error) {%>
-    <%= messages.error %>
-    <% } %>
-    <div class="container_form sign_in" >
-        <div class="welcome_back">
-            <div class="message">
-                <h2> Bienvenido de vuelta!</h2>
-                <p>Si aún no tienes una cuenta porfavor <a href="/register">registrate</a></p>
-            </div>
-        </div>
-        <form class="formulario" method="POST">
-            <h2 class="create_account"> Iniciar sesión</h2>
-            <p class="espacio_inicio_sesion">        </p>
-            <input type="email" id="email" name="email" required placeholder="Email">
-            <input type="password" id="password" name="password" required placeholder="contraseña">
-            <input type="submit" value="Iniciar sesión">
-        </form>
+  <% if (messages.error) {%> <%= messages.error %> <% } %>
+  <div class="container_form sign_in">
+    <div class="welcome_back">
+      <div class="message">
+        <h2>Bienvenido de vuelta!</h2>
+        <p>
+          Si aún no tienes una cuenta porfavor
+          <a href="/register">registrate</a>
+        </p>
+      </div>
     </div>
-
+    <form class="formulario" method="POST">
+      <h2 class="create_account">Iniciar sesión</h2>
+      <p class="espacio_inicio_sesion"></p>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Email"
+      />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        placeholder="contraseña"
+      />
+      <input type="submit" value="Iniciar sesión" />
+    </form>
+  </div>
 </body>

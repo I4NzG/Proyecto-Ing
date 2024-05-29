@@ -58,7 +58,8 @@ const db = mysql.createConnection({
   host: process.env.DATABASE_HOST,
   user: process.env.DATABASE_USER,
   password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE
+  database: process.env.DATABASE,
+  port: process.env.DATABASE_PORT
 })
 
 db.connect((error)=>{
@@ -68,6 +69,10 @@ db.connect((error)=>{
     console.log("Conectado a Mysql..")
   }
 })
+
+
+
+
 /////////////////////////////////////////////////////
 
 
@@ -78,7 +83,7 @@ app.use('/login', require('./routes/pages'))
 
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/dashboard',
     failureRedirect: '/login',
     failureFlash: true
 }))
@@ -131,7 +136,7 @@ function checkNotAuthenticated(req, res, next) {
     next()
 }
 
-app.listen(3000)
+app.listen(5000)
 
 app.use(express.static('public'))
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráfica de Ventas</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 class="chart-title">Familias Beneficiadas</h1>
+    <div class="chart-container" id="chart"></div>
+
+    <script>
+      // Obtener datos desde el servidor
+      fetch("/data")
+        .then((response) => response.json())
+        .then((data) => {
+          createChart(data);
+        });
+
+      // Función para crear la gráfica
+      function createChart(data) {
+        const chartContainer = document.getElementById("chart");
+        data.forEach((item) => {
+          const bar = document.createElement("div");
+          bar.className = "bar";
+          bar.style.height = item.ventas + "px";
+
+          const barLabel = document.createElement("div");
+          barLabel.className = "bar-label";
+          barLabel.innerText = item.mes;
+
+          const barValue = document.createElement("div");
+          barValue.className = "bar-value";
+          barValue.innerText = item.ventas;
+
+          bar.appendChild(barValue);
+          bar.appendChild(barLabel);
+          chartContainer.appendChild(bar);
+        });
+      }
+    </script>
+  </body>
+</html>

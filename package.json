@@ -9,8 +9,18 @@
   "author": "Fausto Medina, Alan Torres, Manuel Gortarez, Ernesto Carrasco, Ricardo Pena, Joaquin Sotelo, Ian Zepeda, Sergio Martinez, Rogelio Peralta",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.18",
+    "bcrypt": "^5.1.1",
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.0",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
